@@ -454,7 +454,7 @@ body {
 .reload {
   position: absolute;
   margin: auto;
-  bottom: 20px;
+  bottom: 50px;
   z-index: 1;
   border-radius: 40px;
   background-color: #f27059;
