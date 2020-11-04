@@ -452,7 +452,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   .reload {
-    bottom: 5px;
+    bottom: 5px !important;
   }
 }
 
