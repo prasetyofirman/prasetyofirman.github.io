@@ -450,6 +450,11 @@ body {
     top: 10px;
   }
 }
+@media screen and (max-width: 750px) {
+  .reload {
+    bottom: 10px;
+  }
+}
 
 .reload {
   position: absolute;
