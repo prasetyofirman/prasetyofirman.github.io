@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Qurinnn :)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- swiperjs -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper-container {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+        .foto-container {
+            width: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .foto-container img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <button class="message__btn">click me</button>
+        <p class="message__text"></p> 
+    </div>
+    
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="foto-container">
+                    <img src="foto/foto1.jpg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="foto-container">
+                    <img src="foto/foto2.jpg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="foto-container">
+                    <img src="foto/foto3.jpg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="foto-container">
+                    <img src="foto/foto4.jpg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="foto-container">
+                    <img src="foto/foto5.jpg">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="foto-container">
+                    <img src="foto/foto6.jpg">
+                </div>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    
+        
+    <button class="reload clickit">Click it Qurinnn !</button>
+    <button class="reload clickit2">LOVE YOU SO MUCH</button>
+    
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <script src="script.js"></script>
+    <script 
+            src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			  crossorigin="anonymous"></script>
+    <script>
+        $('.message__btn').click(function() {
+            openFullscreen();
+        });
+        $('.clickit2').click(function() {
+            $('.clickit2').hide();
+            $('body').css('background-color', '#f79d65')
+            $('body').css('background-image', 'unset')
+            $('body').css('background-size', 'unset')
+            $('body').css('background-repeat', 'unset')
+            $('body').css('background-position', 'unset')
+            $('.swiper-container').hide();
+            $('.message').show();
+            $('.clickit').show();
+            $('.message__text').slideDown();
+        })
+        $('.clickit').click(function() {
+            // closeFullscreen();
+            $('.message__text').slideUp();
+            $('.message').hide();
+            $('.clickit').hide();
+            $('.clickit2').show();
+            $('body').css('background-color', 'white')
+            $('body').css('background-image', 'url("img/bg4.jpg")')
+            $('body').css('background-size', 'cover')
+            $('body').css('background-repeat', 'no-repeat')
+            $('body').css('background-position', 'center')
+            $('.swiper-container').slideDown();
+            // openFullscreen();
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: {
+                    delay: 2000,
+                },
+                // Optional parameters
+                // direction: 'vertical',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            })
+        });
+
+
+        
+
+    </script>
+
+    <script>
+    /* Get the documentElement (<html>) to display the page in fullscreen */
+    var elem = document.documentElement;
+    
+    /* View in fullscreen */
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+    
+    /* Close fullscreen */
+    function closeFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+      }
+    }
+    </script>
+</body>
+</html>
+
+ 
